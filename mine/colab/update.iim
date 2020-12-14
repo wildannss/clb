@@ -16,7 +16,6 @@ FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iM
 WAIT SECONDS=1
 FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\login.iim
 WAIT SECONDS=1
-WAIT SECONDS=1
 FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\logout.iim
 WAIT SECONDS=1
 FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\logout_f.iim

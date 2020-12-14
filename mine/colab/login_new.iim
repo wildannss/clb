@@ -9,7 +9,7 @@ CLEAR
 FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\update.iim
 
 'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=update.iim
-URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/colab/gpu/update.iim
+URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/colab/update.iim
 SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=update.iim
 
 CLEAR
