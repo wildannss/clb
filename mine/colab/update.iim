@@ -62,9 +62,9 @@ WAIT SECONDS=1
 URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/colab/source.iim
 SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=source.iim
 
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\mine.js
-'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=mine.js
-URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/colab/mine.js
-SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=mine.js
+FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\run.js
+'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=run.js
+URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/colab/run.js
+SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=run.js
 
 CLEAR
