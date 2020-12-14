@@ -11,4 +11,4 @@ FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iM
 
 'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Datasources FILE=users.csv
 URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/{{!COL4}}/users.csv
-SAVEAS TYPE=EXTRACT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Datasources FILE=users.csv
+SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Datasources FILE=users.csv
