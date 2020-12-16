@@ -1,0 +1,14 @@
+VERSION BUILD={{version}} RECORDER=FX
+SET !DATASOURCE {{source}}
+SET !DATASOURCE_COLUMNS {{coloumn}}
+SET !DATASOURCE_LINE {{loop}}
+SET !USERAGENT {{!COL5}}
+
+TAB T=1
+CLEAR
+
+'FILEDELETE NAME={{folderDownload}}\Datasources\{{source}}
+
+'ONDOWNLOAD FOLDER={{folderDownload}} FILE={{source}}
+URL GOTO={{urlDownload}}/{{urlSubDownload}}/{{source}}
+SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Datasources\ FILE={{source}}

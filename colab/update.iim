@@ -1,70 +1,71 @@
-VERSION BUILD=8970419 RECORDER=FX
-SET !DATASOURCE users.csv
-SET !DATASOURCE_COLUMNS 5
+VERSION BUILD={{version}} RECORDER=FX
+SET !DATASOURCE {{source}}
+SET !DATASOURCE_COLUMNS {{coloumn}}
 SET !DATASOURCE_LINE {{loop}}
+SET !USERAGENT {{!COL5}}
 
 TAB T=1
 CLEAR
  
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\login_cap.iim
-WAIT SECONDS=1
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\login_del_new.iim
-WAIT SECONDS=1
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\login_del.iim
-WAIT SECONDS=1
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\login_new.iim
-WAIT SECONDS=1
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\login.iim
-WAIT SECONDS=1
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\logout.iim
-WAIT SECONDS=1
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\logout_f.iim
-WAIT SECONDS=1
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\source.iim
+'FILEDELETE NAME={{downloadFolder}}\Macros\colab\captcha.iim
+'WAIT SECONDS=1
+'FILEDELETE NAME={{downloadFolder}}\Macros\colab\login_del_new.iim
+'WAIT SECONDS=1
+'FILEDELETE NAME={{downloadFolder}}\Macros\colab\login_del.iim
+'WAIT SECONDS=1
+'FILEDELETE NAME={{downloadFolder}}\Macros\colab\login_new.iim
+'WAIT SECONDS=1
+'FILEDELETE NAME={{downloadFolder}}\Macros\colab\login.iim
+'WAIT SECONDS=1
+'FILEDELETE NAME={{downloadFolder}}\Macros\colab\logout.iim
+'WAIT SECONDS=1
+'FILEDELETE NAME={{downloadFolder}}\Macros\colab\logout_f.iim
+'WAIT SECONDS=1
+'FILEDELETE NAME={{downloadFolder}}\Macros\colab\data.iim
 
 WAIT SECONDS=1
-'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=login_cap.iim
-URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/colab/login_cap.iim
-SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=login_cap.iim
+'ONDOWNLOAD FOLDER={{downloadFolder}}\Macros\colab FILE=captcha.iim
+URL GOTO={{urlDownload}}/{{urlSubDownload}}/captcha.iim
+SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=captcha.iim
 
 WAIT SECONDS=1
-'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=login_del_new.iim
-URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/colab/login_del_new.iim
-SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=login_del_new.iim
+'ONDOWNLOAD FOLDER={{downloadFolder}}\Macros\colab FILE=login_del_new.iim
+URL GOTO={{urlDownload}}/{{urlSubDownload}}/login_del_new.iim
+SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=login_del_new.iim
 
 WAIT SECONDS=1
-'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=login_del.iim
-URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/colab/login_del.iim
-SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=login_del.iim
+'ONDOWNLOAD FOLDER={{downloadFolder}}\Macros\colab FILE=login_del.iim
+URL GOTO={{urlDownload}}/{{urlSubDownload}}/login_del.iim
+SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=login_del.iim
 
 WAIT SECONDS=1
-'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=login_new.iim
-URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/colab/login_new.iim
-SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=login_new.iim
+'ONDOWNLOAD FOLDER={{downloadFolder}}\Macros\colab FILE=login_new.iim
+URL GOTO={{urlDownload}}/{{urlSubDownload}}/login_new.iim
+SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=login_new.iim
 
 WAIT SECONDS=1
-'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=login.iim
-URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/colab/login.iim
-SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=login.iim
+'ONDOWNLOAD FOLDER={{downloadFolder}}\Macros\colab FILE=login.iim
+URL GOTO={{urlDownload}}/{{urlSubDownload}}/login.iim
+SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=login.iim
 
 WAIT SECONDS=1
-'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=logout.iim
-URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/colab/logout.iim
-SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=logout.iim
+'ONDOWNLOAD FOLDER={{downloadFolder}}\Macros\colab FILE=logout.iim
+URL GOTO={{urlDownload}}/{{urlSubDownload}}/logout.iim
+SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=logout.iim
 
 WAIT SECONDS=1
-'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=logout_f.iim
-URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/colab/logout_f.iim
-SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=logout_f.iim
+'ONDOWNLOAD FOLDER={{downloadFolder}}\Macros\colab FILE=logout_f.iim
+URL GOTO={{urlDownload}}/{{urlSubDownload}}/logout_f.iim
+SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=logout_f.iim
 
 WAIT SECONDS=1
-'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=source.iim
-URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/colab/source.iim
-SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=source.iim
+'ONDOWNLOAD FOLDER={{downloadFolder}}\Macros\colab FILE=data.iim
+URL GOTO={{urlDownload}}/{{urlSubDownload}}/data.iim
+SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=data.iim
 
-FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\run.js
-'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=run.js
-URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/colab/run.js
-SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=run.js
+'FILEDELETE NAME={{downloadFolder}}\Macros\colab\run.js
+'ONDOWNLOAD FOLDER={{downloadFolder}}\Macros\colab FILE=run.js
+URL GOTO={{urlDownload}}/{{urlSubDownload}}/run.js
+SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=run.js
 
 CLEAR
