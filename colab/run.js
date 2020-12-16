@@ -62,7 +62,7 @@ function runningCode(icod){
     iimSet("loop",icod);
     iimPlay("colab/run_code");
     //KEEP CONNECTED 10x
-    for(r=1; r<=2; r++){
+    for(r=1; r<=10; r++){
         head();
         iimSet("loop",icod);
         var reconn = iimGetErrorText(iimPlay("colab/keep_code"));
