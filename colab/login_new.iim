@@ -6,17 +6,14 @@ SET !USERAGENT {{!COL5}}
 
 ''TAB BARU''
 TAB T=1
-'CLEAR
+CLEAR
 
 ''update file source''
-'FILEDELETE NAME=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab\update.iim
-'WAIT SECONDS=1
-'ONDOWNLOAD FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=update.iim
-'URL GOTO=https://raw.githubusercontent.com/wildannss/clb/main/mine/colab/update.iim
-'WAIT SECONDS=2
-'SAVEAS TYPE=TXT FOLDER=C:\Users\Administrator\Downloads\FirefoxPortable\Data\profile\iMacros\Macros\colab FILE=update.iim
+URL GOTO={{urlDownload}}/{{urlSubDownload}}/update.iim
+WAIT SECONDS=2
+SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Macros\colab FILE=update.iim
 
-'CLEAR
+CLEAR
 
 ''go to colab page than signing''
 URL GOTO=https://colab.research.google.com/github/wildannss/{{!COL3}}/blob/main/go{{!COL4}}.ipynb

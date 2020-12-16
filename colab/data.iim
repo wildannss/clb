@@ -7,8 +7,12 @@ SET !USERAGENT {{!COL5}}
 TAB T=1
 CLEAR
 
-'FILEDELETE NAME={{folderDownload}}\Datasources\{{source}}
-
-'ONDOWNLOAD FOLDER={{folderDownload}} FILE={{source}}
+''go to datasource''
+WAIT SECONDS=1
 URL GOTO={{urlDownload}}/{{urlSubDownload}}/{{source}}
+
+''download datasource''
+WAIT SECONDS=1
 SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Datasources\ FILE={{source}}
+
+CLEAR

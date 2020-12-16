@@ -3,11 +3,11 @@
 var version = "8970419";
 var source = "users.csv";
 var coloumn = 5;
-var counted = parseInt(window.prompt("What VPS counted?\n\np.s: just number"));
-var row = counted;
 var folderDownload = "D:\Downloads\Server\Windows\Installer\Colab\FirefoxPortable\Data\profile\iMacros";
 var urlDownload = "https://raw.githubusercontent.com/wildannss/clb/main";
 var urlSubDownload = "colab";
+var counted = parseInt(window.prompt("Use number only"));
+var serviceCap = "http://imacros2.2captcha.com";
 //VARIABEL ERROR
 var error1 = /RuntimeError: Can not locate element specified by selector "#gb>DIV>DIV>A"/g;
 var error9 = /RuntimeError: Can not locate element specified by selector "#view_container/g;
@@ -36,10 +36,10 @@ function head(){
     iimSet("version",version);
     iimSet("source",source);
     iimSet("coloumn",coloumn);
-    iimSet("counted",counted);
     iimSet("folderDownload",folderDownload);
     iimSet("urlDownload",urlDownload);
     iimSet("urlSubDownload",urlSubDownload);
+    iimSet("serviceCap",serviceCap);
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //LOGOUT
@@ -62,7 +62,7 @@ function runningCode(icod){
     iimSet("loop",icod);
     iimPlay("colab/run_code");
     //KEEP CONNECTED 10x
-    for(r=1; r<=10; r++){
+    for(r=1; r<=2; r++){
         head();
         iimSet("loop",icod);
         var reconn = iimGetErrorText(iimPlay("colab/keep_code"));
@@ -104,72 +104,91 @@ function upScript(iscr){
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //LOGIC RUNNING//
-
-//UPDATE DATA SOURCE
-dataSource();
-for(i=1; i<=2; i++){
+function go(i){
     //UPDATE SCRIPT
-    upScript(i)
+    // upScript(parseInt(counted+i))
     //1.LOGIN TANPA USER FORM BARU
     head();
-    iimSet("loop",i);
+    iimSet("loop",parseInt(counted+i));
     var run1 = iimGetErrorText(iimPlay("colab/login_new"));
 
-    //2.JIKA BELUM LOGOUT
-    if(error1.test(run1)){
-        logout(i)
-        i--;
-    }
-
-    //3.JIKA LOGIN ADA USER FORM BARU
-    else if(error7.test(run1)){
+    //2.JIKA LOGIN ADA USER FORM BARU
+    if(error7.test(run1)){
         head();
-        iimSet("loop",i);
+        iimSet("loop",parseInt(counted+i));
         var run2 = iimGetErrorText(iimPlay("colab/login_del_new"));
-        //3.a.JIKA SUDAH PERNAH LOGIN
-        if(error3.test(run2)){
-            logout(i);
-        }
-        //3.b.JIKA LOGIN ADA USER FORM LAMA
-        else if(error9.test(run2)){
+        //2.a.JIKA LOGIN ADA USER FORM LAMA
+        if(error9.test(run2)){
             head();
-            iimSet("loop",i);
+            iimSet("loop",parseInt(counted+i));
             var run3 = iimGetErrorText(iimPlay("colab/login_del"));
-            //3.b.1.JIKA SUDAH PERNAH LOGIN
-            if(error3.test(run3)){
-                logout(i);
-            }
-            //3.b.2.JIKA LOGIN TANPA USER FORM LAMA
-            else if(error6.test(run3)){
+            //2.a.1.JIKA LOGIN TANPA USER FORM LAMA
+            if(error6.test(run3)){
                 head();
-                iimSet("loop",i);
+                iimSet("loop",parseInt(counted+i));
                 var run4 = iimGetErrorText(iimPlay("colab/login"));                    
-                //3.b.2.1.JIKA SUDAH PERNAH LOGIN
-                if(error3.test(run4)){
-                    logout(i);
-                }
-                else if(error4.test(run4)){
+                if(error4.test(run4)){
                     ////CAPCTHA////
                     head();
-                    iimSet("loop",i);
+                    iimSet("loop",parseInt(counted+i));
                     iimPlay("colab/captcha");
-                    runningCode(i);
-                    logout(i);
+                    runningCode(parseInt(counted+i));
+                    logout(parseInt(counted+i));
                     ////CAPCTHA////
-                }else{
-                    runningCode(i);
-                    logout(i);
                 }
-            }else{
-                runningCode(i);
-                logout(i);
+                //2.a.1.1.JIKA SUDAH PERNAH LOGIN
+                else if(error3.test(run4)){
+                    logout(parseInt(counted+i));
+                }
+                //2.a.1.2.JIKA TIDAK ADA ERROR
+                else{
+                    runningCode(parseInt(counted+i));
+                    logout(parseInt(counted+i));
+                }
             }
-        }else{
-            runningCode(i);
-            logout(i);
+            //2.a.2.JIKA SUDAH PERNAH LOGIN
+            else if(error3.test(run3)){
+                logout(parseInt(counted+i));
+            }
+            //2.a.3.JIKA TIDAK ADA ERROR
+            else{
+                runningCode(parseInt(counted+i));
+                logout(parseInt(counted+i));
+            }
         }
-    }else{
-        runningCode(i);
-        logout(i);
+        //2.b.JIKA SUDAH PERNAH LOGIN
+        else if(error3.test(run2)){
+            logout(parseInt(counted+i));
+        }
+        //2.c.JIKA TIDAK ADA ERROR
+        else{
+            runningCode(parseInt(counted+i));
+            logout(parseInt(counted+i));
+        }
+    }
+
+    //3.JIKA BELUM LOGOUT
+    else if(error1.test(run1)){
+        logout(parseInt(counted+i));
+        i--;
+    }
+    //4.JIKA TIDAK ADA ERROR
+    else{
+        runningCode(parseInt(counted+i));
+        logout(parseInt(counted+i));
     }
 }
+
+function daily(){
+    for(a=1; a<=100; a++){
+        go(a);
+    }
+}
+
+function monthly(){
+    for(b=1; b<=30; b++){
+        daily();
+    }
+}
+
+monthly();
