@@ -74,7 +74,7 @@ function runningCode(icod){
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //UPDATE DATA SOURCE
-function dataSource(idat){
+function dataSource(idat=1){
     head();
     iimSet("loop",idat);
     var dat = iimGetErrorText(iimPlay("colab/data"));
@@ -106,8 +106,8 @@ function upScript(iscr){
 //LOGIC RUNNING//
 
 //UPDATE DATA SOURCE
-dataSource(i);
-for(i=1; i<=1; i++){
+dataSource();
+for(i=1; i<=3; i++){
     //UPDATE SCRIPT
     upScript(i)
     //1.LOGIN TANPA USER FORM BARU
@@ -152,11 +152,24 @@ for(i=1; i<=1; i++){
                     ////CAPCTHA////
                     head();
                     iimSet("loop",i);
-                    iimPlay("colab/captcha")
+                    iimPlay("colab/captcha");
+                    runningCode(i);
+                    logout(i);
                     ////CAPCTHA////
+                }else{
+                    runningCode(i);
+                    logout(i);
                 }
+            }else{
+                runningCode(i);
+                logout(i);
             }
+        }else{
+            runningCode(i);
+            logout(i);
         }
+    }else{
+        runningCode(i);
+        logout(i);
     }
-    runningCode(i);
 }
