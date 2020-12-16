@@ -107,7 +107,7 @@ function upScript(iscr){
 
 //UPDATE DATA SOURCE
 dataSource();
-for(i=1; i<=3; i++){
+for(i=1; i<=2; i++){
     //UPDATE SCRIPT
     upScript(i)
     //1.LOGIN TANPA USER FORM BARU
