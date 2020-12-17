@@ -4,21 +4,6 @@ SET !DATASOURCE_COLUMNS {{coloumn}}
 SET !DATASOURCE_LINE {{loop}}
 SET !USERAGENT {{!COL5}}
 
-''TAB BARU''
-TAB T=1
-CLEAR
-
-''update file source''
-URL GOTO={{urlDownload}}/{{urlSubDownload}}/update.iim
-WAIT SECONDS=2
-SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Macros\colab FILE=update.iim
-
-CLEAR
-
-''go to colab page than signing''
-URL GOTO=https://colab.research.google.com/github/wildannss/{{!COL3}}/blob/main/go{{!COL4}}.ipynb
-EVENT TYPE=CLICK SELECTOR="#gb>DIV>DIV>A" BUTTON=0
-
 ''entry email''
 WAIT SECONDS=1
 TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:identifierId CONTENT={{!COL1}}
@@ -34,3 +19,19 @@ EVENT TYPE=CLICK SELECTOR="#passwordNext>DIV>BUTTON" BUTTON=0
 ''accept term''
 WAIT SECONDS=2
 EVENT TYPE=CLICK SELECTOR="#accept" BUTTON=0
+
+''running code''
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#cell-8uQ12Gz6ZzCb>DIV:nth-of-type(2)>DIV:nth-of-type(4)>COLAB-RUN-BUTTON>DIV>DIV:nth-of-type(2)>IRON-ICON" BUTTON=0
+WAIT SECONDS=4
+EVENT TYPE=CLICK SELECTOR="#ok" BUTTON=0
+WAIT SECONDS=120
+
+''keep running''
+URL GOTO=imacros://run/?m=colab/keep_run.js
+
+''logout''
+EVENT TYPE=CLICK SELECTOR="#gb>DIV>DIV>DIV:nth-of-type(2)>DIV>A>IMG" BUTTON=0
+WAIT SECONDS=3
+EVENT TYPE=CLICK SELECTOR="#gb_71" BUTTON=0
+WAIT SECONDS=3
