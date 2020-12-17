@@ -5,7 +5,7 @@ SET !DATASOURCE_LINE {{loop}}
 SET !USERAGENT {{!COL5}}
 
 TAB T=1
-   
+    
 WAIT SECONDS=1
 URL GOTO={{urlDownload}}/{{urlSubDownload}}/captcha.iim
 SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=captcha.iim

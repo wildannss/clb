@@ -56,3 +56,245 @@ EVENT TYPE=CLICK SELECTOR="#cell-8uQ12Gz6ZzCb>DIV:nth-of-type(2)>DIV:nth-of-type
 WAIT SECONDS=4
 EVENT TYPE=CLICK SELECTOR="#ok" BUTTON=0
 WAIT SECONDS=60
+
+''keep running''
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+WAIT SECONDS=1
+EVENT TYPE=CLICK SELECTOR="#runtime-menu-button>DIV>DIV>DIV" BUTTON=0
+WAIT SECONDS=2
+EVENT TYPE=CLICK SELECTOR="#\\:1v>DIV" BUTTON=0
+WAIT SECONDS=10
+EVENT TYPE=KEYPRESS SELECTOR="#ok" KEY=13
+WAIT SECONDS=60
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+''logout''
+WAIT SECONDS=60
+EVENT TYPE=CLICK SELECTOR="#gb>DIV>DIV>DIV:nth-of-type(2)>DIV>A>IMG" BUTTON=0
+WAIT SECONDS=3
+EVENT TYPE=CLICK SELECTOR="#gb_71" BUTTON=0
+WAIT SECONDS=3

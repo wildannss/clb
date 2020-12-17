@@ -68,8 +68,7 @@ function keepRun(i){
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //RUNNING CODE
 function go(){
-    for(b=1; b<=3; b++){
-        var temp = 0;
+    for(b=1; b<=3000; b++){
         //UPDATE DATASOURCE
         head();
         iimSet("loop",parseInt(counted+b));
@@ -83,13 +82,11 @@ function go(){
         iimSet("loop",parseInt(counted+b));
         iimPlay("colab/update");
         //LOGIN
-        temp++;
         head();
         iimSet("loop",parseInt(counted+b));
         var run1 = iimGetErrorText(iimPlay("colab/login"));
         //JIKA BELUM LOGOUT
         if(error1.test(run1)){
-            temp--;
             head();
             iimSet("loop",parseInt(counted+b));
             var run_a = iimGetErrorText(iimPlay("colab/logout_f"));
@@ -122,22 +119,18 @@ function go(){
                         var run_y = iimGetErrorText(iimPlay("colab/captcha_new"));
                         //JIKA SUDAH PERNAH LOGIN
                         if(error3.test(run_y)){
-                            temp--;
                             head();
                             iimSet("loop",parseInt(counted+b));
                             iimPlay("colab/logout");
                         }
-                        // else{keepRun(b)}
                     }
                     //JIKA SUDAH PERNAH LOGIN
                     else if(error3.test(run4)){
-                        temp--;
                         head();
                         iimSet("loop",parseInt(counted+b));
                         iimPlay("colab/logout");
                     }
                     /////////////////
-                    // else{keepRun(b)}
                 }
                 ////////////////
                 ////CAPTCHA////
@@ -147,22 +140,18 @@ function go(){
                     var run_z = iimGetErrorText(iimPlay("colab/captcha_new"));
                     //JIKA SUDAH PERNAH LOGIN
                     if(error3.test(run_z)){
-                        temp--;
                         head();
                         iimSet("loop",parseInt(counted+b));
                         iimPlay("colab/logout");
                     }
-                    // else{keepRun(b)}
                 }
                 //JIKA SUDAH PERNAH LOGIN
                 else if(error3.test(run3)){
-                    temp--;
                     head();
                     iimSet("loop",parseInt(counted+b));
                     iimPlay("colab/logout");
                 }
                 /////////////////
-                // else{keepRun(b)}
             }
             ////////////////
             ////CAPTCHA////
@@ -172,22 +161,18 @@ function go(){
                 var run_w = iimGetErrorText(iimPlay("colab/captcha"));
                 //JIKA SUDAH PERNAH LOGIN
                 if(error3.test(run_w)){
-                    temp--;
                     head();
                     iimSet("loop",parseInt(counted+b));
                     iimPlay("colab/logout");
                 }
-                // else{keepRun(b)}
             }
             //JIKA SUDAH PERNAH LOGIN
             else if(error3.test(run2)){
-                temp--;
                 head();
                 iimSet("loop",parseInt(counted+b));
                 iimPlay("colab/logout");
             }
             /////////////////
-            // else{keepRun(b)}
         }
         ////CAPTCHA////
         else if(error4.test(run1)){
@@ -196,25 +181,17 @@ function go(){
             var run_x = iimGetErrorText(iimPlay("colab/captcha"));
             //JIKA SUDAH PERNAH LOGIN
             if(error3.test(run_x)){
-                temp--;
                 head();
                 iimSet("loop",parseInt(counted+b));
                 iimPlay("colab/logout");
             }
-            // else{keepRun(b)}
         }
         //JIKA SUDAH PERNAH LOGIN
         else if(error3.test(run1)){
-            temp--;
             head();
             iimSet("loop",parseInt(counted+b));
             iimPlay("colab/logout");
             b--;
-        }
-        // else{keepRun(b)}
-        if(temp == 1){
-            temp--;
-            keepRun(b)
         }
     }
 }
