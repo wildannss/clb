@@ -61,20 +61,20 @@ function logout(){
 //RUNNING CODE
 for(b=1; b<=4; b++){
     var itung = parseInt(counted+b);
-    //UPDATE DATASOURCE
-    head();
-    iimSet("loop",itung);
-    var run0 = iimGetErrorText(iimPlay("colab/data"));
-    //JIKA ADA WARNING STAY PAGE
-    if(error12.test(run0)){
-        head();
-        iimSet("loop",itung);
-        iimPlay("colab/logout_f");
-    }
-    /////////////UPDATE SCRIPT/////////////
-    head();
-    iimSet("loop",itung);
-    iimPlay("colab/update");
+    // //UPDATE DATASOURCE
+    // head();
+    // iimSet("loop",itung);
+    // var run0 = iimGetErrorText(iimPlay("colab/data"));
+    // //JIKA ADA WARNING STAY PAGE
+    // if(error12.test(run0)){
+    //     head();
+    //     iimSet("loop",itung);
+    //     iimPlay("colab/logout_f");
+    // }
+    // /////////////UPDATE SCRIPT/////////////
+    // head();
+    // iimSet("loop",itung);
+    // iimPlay("colab/update");
     ///////////////////////////////////////
 
     //LOGIN
