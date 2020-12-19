@@ -59,7 +59,7 @@ function logout(){
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //RUNNING CODE
-for(b=1; b<=3; b++){
+for(b=1; b<=8; b++){
     var itung = parseInt(counted+b);
     //UPDATE DATASOURCE
     head();
