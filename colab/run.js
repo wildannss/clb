@@ -59,7 +59,7 @@ function logout(){
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //RUNNING CODE
-for(b=1; b<=4; b++){
+for(b=1; b<=5; b++){
     var itung = parseInt(counted+b);
     // //UPDATE DATASOURCE
     // head();
@@ -201,7 +201,7 @@ for(b=1; b<=4; b++){
     //JIKA SUDAH PERNAH LOGIN
     case error3.test(run1):
         logout();
-        // b--;
+        b--;
         continue;
     case error15.test(run1):
         keepRun();
