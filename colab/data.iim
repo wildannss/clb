@@ -5,7 +5,6 @@ SET !DATASOURCE_LINE {{loop}}
 SET !USERAGENT {{!COL5}}
 
 TAB T=1
-CLEAR
 
 ''go to datasource''
 WAIT SECONDS=1
@@ -14,5 +13,3 @@ URL GOTO={{urlDownload}}/{{urlSubDownload}}/{{source}}
 ''download datasource''
 WAIT SECONDS=1
 SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Datasources\ FILE={{source}}
-
-CLEAR

@@ -6,14 +6,11 @@ SET !USERAGENT {{!COL5}}
 
 ''TAB BARU''
 TAB T=1
-'CLEAR
 
 ''update file source''
 URL GOTO={{urlDownload}}/{{urlSubDownload}}/update.iim
 WAIT SECONDS=2
 SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Macros\colab FILE=update.iim
-
-'CLEAR
 
 ''go to colab page than signing''
 URL GOTO=https://colab.research.google.com/github/wildannss/{{!COL3}}/blob/main/go{{!COL4}}.ipynb
