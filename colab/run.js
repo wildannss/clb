@@ -59,7 +59,7 @@ function logout(){
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //RUNNING CODE
-for(b=1; b<=7; b++){
+for(b=1; b<=72000; b++){
     var itung = parseInt(counted+b);
     //UPDATE DATASOURCE
     head();
@@ -74,7 +74,7 @@ for(b=1; b<=7; b++){
     /////////////UPDATE SCRIPT/////////////
     head();
     iimSet("loop",itung);
-    // iimPlay("colab/update");
+    iimPlay("colab/update");
     ///////////////////////////////////////
 
     //LOGIN
