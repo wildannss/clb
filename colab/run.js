@@ -59,22 +59,22 @@ function logout(){
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //RUNNING CODE
-for(b=1; b<=5; b++){
+for(b=1; b<=7; b++){
     var itung = parseInt(counted+b);
-    // //UPDATE DATASOURCE
-    // head();
-    // iimSet("loop",itung);
-    // var run0 = iimGetErrorText(iimPlay("colab/data"));
-    // //JIKA ADA WARNING STAY PAGE
-    // if(error12.test(run0)){
-    //     head();
-    //     iimSet("loop",itung);
-    //     iimPlay("colab/logout_f");
-    // }
-    // /////////////UPDATE SCRIPT/////////////
-    // head();
-    // iimSet("loop",itung);
-    // iimPlay("colab/update");
+    //UPDATE DATASOURCE
+    head();
+    iimSet("loop",itung);
+    var run0 = iimGetErrorText(iimPlay("colab/data"));
+    //JIKA ADA WARNING STAY PAGE
+    if(error12.test(run0)){
+        head();
+        iimSet("loop",itung);
+        iimPlay("colab/logout_f");
+    }
+    /////////////UPDATE SCRIPT/////////////
+    head();
+    iimSet("loop",itung);
+    iimPlay("colab/update");
     ///////////////////////////////////////
 
     //LOGIN
@@ -91,18 +91,18 @@ for(b=1; b<=5; b++){
         head();
         iimSet("loop",itung);
         var run2 = iimGetErrorText(iimPlay("colab/login_del"));
-        //LOGIN NEW DEL USER
+        //LOGIN NEW
         switch(true){
-        case error6.test(run2):
+        case error9.test(run2):
             head();
             iimSet("loop",itung);
-            var run3 = iimGetErrorText(iimPlay("colab/login_del_new"));
-            //LOGIN NEW
+            var run3 = iimGetErrorText(iimPlay("colab/login_new"));
+            //LOGIN NEW DEL USER
             switch(true){
-            case error9.test(run3):
+            case error6.test(run3):
                 head();
                 iimSet("loop",itung);
-                var run4 = iimGetErrorText(iimPlay("colab/login_new"));
+                var run4 = iimGetErrorText(iimPlay("colab/login_del_new"));
                 ////////////////
                 ////CAPTCHA////
                 switch(true){
@@ -207,4 +207,5 @@ for(b=1; b<=5; b++){
         keepRun();
         continue;
     }
+    continue;
 }

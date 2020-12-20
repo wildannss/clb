@@ -6,6 +6,8 @@ SET !USERAGENT {{!COL5}}
 
 TAB T=1
 
+CLEAR
+
 ''go to datasource''
 WAIT SECONDS=1
 URL GOTO={{urlDownload}}/{{urlSubDownload}}/{{source}}
