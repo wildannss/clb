@@ -42,9 +42,9 @@ function head(){
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //KEEP RUNNING
 function keepRun(){
-    for(j=1; j<=28; j++){
+    for(j=1; j<=56; j++){
         if(error15.test(iimGetErrorText(iimPlay("colab/keep")))){
-            iimPlayCode("WAIT SECONDS=60");
+            iimPlayCode("WAIT SECONDS=30");
         }
     }
 }
