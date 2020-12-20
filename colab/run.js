@@ -72,8 +72,8 @@ for(b=1; b<=7; b++){
         iimPlay("colab/logout_f");
     }
     /////////////UPDATE SCRIPT/////////////
-    // head();
-    // iimSet("loop",itung);
+    head();
+    iimSet("loop",itung);
     // iimPlay("colab/update");
     ///////////////////////////////////////
 
@@ -90,13 +90,13 @@ for(b=1; b<=7; b++){
     case error2.test(run1):
         head();
         iimSet("loop",itung);
-        var run2 = iimGetErrorText(iimPlay("colab/login_del"));
+        var run2 = iimGetErrorText(iimPlay("colab/login_new"));
         //LOGIN NEW
         switch(true){
-        case error9.test(run2):
+        case error7.test(run2):
             head();
             iimSet("loop",itung);
-            var run3 = iimGetErrorText(iimPlay("colab/login_new"));
+            var run3 = iimGetErrorText(iimPlay("colab/login_del"));
             //LOGIN NEW DEL USER
             switch(true){
             case error6.test(run3):
@@ -132,10 +132,10 @@ for(b=1; b<=7; b++){
                 continue;
             ////////////////
             ////CAPTCHA////
-            case error10.test(run3):
+            case error4.test(run3):
                 head();
                 iimSet("loop",itung);
-                var run_z = iimGetErrorText(iimPlay("colab/captcha_new"));
+                var run_z = iimGetErrorText(iimPlay("colab/captcha"));
                 //JIKA SUDAH PERNAH LOGIN
                 switch(true){
                 case error3.test(run_z):
@@ -157,10 +157,10 @@ for(b=1; b<=7; b++){
             continue;
         ////////////////
         ////CAPTCHA////
-        case error4.test(run2):
+        case error10.test(run2):
             head();
             iimSet("loop",itung);
-            var run_w = iimGetErrorText(iimPlay("colab/captcha"));
+            var run_w = iimGetErrorText(iimPlay("colab/captcha_new"));
             //JIKA SUDAH PERNAH LOGIN
             switch(true){
             case error3.test(run_w):
