@@ -72,9 +72,9 @@ for(b=1; b<=7; b++){
         iimPlay("colab/logout_f");
     }
     /////////////UPDATE SCRIPT/////////////
-    head();
-    iimSet("loop",itung);
-    iimPlay("colab/update");
+    // head();
+    // iimSet("loop",itung);
+    // iimPlay("colab/update");
     ///////////////////////////////////////
 
     //LOGIN
