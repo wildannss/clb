@@ -10,7 +10,7 @@ CLEAR
 
 ''go to datasource''
 WAIT SECONDS=1
-URL GOTO={{urlDownload}}/{{urlDataDownload}}/{{nomor}}/{{source}}
+URL GOTO={{urlDownload}}/{{urlDataDownload}}/{{counted}}/{{source}}
 
 ''download datasource''
 WAIT SECONDS=1

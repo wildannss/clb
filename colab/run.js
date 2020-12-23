@@ -7,8 +7,7 @@ var folderDownload = "C:\\Users\\Administrator\\Downloads\\FirefoxPortable\\Data
 var urlDownload = "https://raw.githubusercontent.com/wildannss/clb/main";
 var urlSubDownload = "colab";
 var urlDataDownload = "data_users";
-var nomor = "1";
-//var counted = parseInt(window.prompt("Use number only"));
+var counted = parseInt(window.prompt("Use number only"));
 var serviceCap = "http://imacros2.2captcha.com";
 //VARIABEL ERROR
 var error1 = /RuntimeError: Can not locate element specified by selector "#gb>DIV>DIV>A"/g;
@@ -40,8 +39,7 @@ function head(){
     iimSet("urlSubDownload",urlSubDownload);
     iimSet("urlDataDownload",urlDataDownload);
     iimSet("serviceCap",serviceCap);
-    iimSet("nomor",nomor);
-    // iimSet("counted",counted);
+    iimSet("counted",counted);
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //KEEP RUNNING
