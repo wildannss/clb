@@ -38,6 +38,7 @@ function head(){
     iimSet("folderDownload",folderDownload);
     iimSet("urlDownload",urlDownload);
     iimSet("urlSubDownload",urlSubDownload);
+    iimSet("urlDataDownload",urlDataDownload);
     iimSet("serviceCap",serviceCap);
     iimSet("nomor",nomor);
     // iimSet("counted",counted);
