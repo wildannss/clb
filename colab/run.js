@@ -216,3 +216,5 @@ function go(){
         continue;
     }
 }
+
+go();
