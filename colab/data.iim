@@ -1,12 +1,12 @@
-VERSION BUILD={{version}} RECORDER=FX
-SET !DATASOURCE {{source}}
-SET !DATASOURCE_COLUMNS {{coloumn}}
-SET !DATASOURCE_LINE {{loop}}
-SET !USERAGENT {{!COL5}}
+VERSION BUILD=8970419 RECORDER=FX
 
 TAB T=1
 
 CLEAR
+
+''delete old datasource''
+WAIT SECONDS=1
+FILEDELETE NAME={{folderDownload}}\Datasources\{{source}}
 
 ''go to datasource''
 WAIT SECONDS=1

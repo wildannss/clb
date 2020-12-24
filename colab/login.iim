@@ -10,6 +10,8 @@ TAB T=1
 CLEAR
 
 ''update file source''
+WAIT SECONDS=1
+FILEDELETE NAME={{downloadFolder}}\Macros\colab\update.iim
 URL GOTO={{urlDownload}}/{{urlSubDownload}}/update.iim
 WAIT SECONDS=2
 SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Macros\colab FILE=update.iim
