@@ -10,7 +10,7 @@ FILEDELETE NAME={{folderDownload}}\Datasources\{{source}}
 
 ''go to datasource''
 WAIT SECONDS=1
-URL GOTO={{urlDownload}}/{{urlDataDownload}}/{{counted}}/{{source}}
+URL GOTO={{urlDownload}}/{{urlDataDownload}}/{{counted}}/users.csv
 
 ''download datasource''
 WAIT SECONDS=1
