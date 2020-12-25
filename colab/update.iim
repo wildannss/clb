@@ -5,54 +5,54 @@ TAB T=1
 CLEAR
 
 WAIT SECONDS=1
-FILEDELETE NAME={{downloadFolder}}\Macros\colab\captcha.iim
+FILEDELETE NAME={{folderDownload}}\Macros\colab\captcha.iim
 WAIT SECONDS=1
 URL GOTO={{urlDownload}}/{{urlSubDownload}}/captcha.iim
-SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=captcha.iim
+SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Macros\colab FILE=captcha.iim
 
 WAIT SECONDS=1
-FILEDELETE NAME={{downloadFolder}}\Macros\colab\login_del_new.iim
+FILEDELETE NAME={{folderDownload}}\Macros\colab\login_del_new.iim
 WAIT SECONDS=1
 URL GOTO={{urlDownload}}/{{urlSubDownload}}/login_del_new.iim
-SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=login_del_new.iim
+SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Macros\colab FILE=login_del_new.iim
 
 WAIT SECONDS=1
-FILEDELETE NAME={{downloadFolder}}\Macros\colab\login_del.iim
+FILEDELETE NAME={{folderDownload}}\Macros\colab\login_del.iim
 WAIT SECONDS=1
 URL GOTO={{urlDownload}}/{{urlSubDownload}}/login_del.iim
-SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=login_del.iim
+SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Macros\colab FILE=login_del.iim
 
 WAIT SECONDS=1
-FILEDELETE NAME={{downloadFolder}}\Macros\colab\login_new.iim
+FILEDELETE NAME={{folderDownload}}\Macros\colab\login_new.iim
 WAIT SECONDS=1
 URL GOTO={{urlDownload}}/{{urlSubDownload}}/login_new.iim
-SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=login_new.iim
+SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Macros\colab FILE=login_new.iim
 
 WAIT SECONDS=1
-FILEDELETE NAME={{downloadFolder}}\Macros\colab\login.iim
+FILEDELETE NAME={{folderDownload}}\Macros\colab\login.iim
 WAIT SECONDS=1
 URL GOTO={{urlDownload}}/{{urlSubDownload}}/login.iim
-SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=login.iim
+SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Macros\colab FILE=login.iim
 
 WAIT SECONDS=1
-FILEDELETE NAME={{downloadFolder}}\Macros\colab\logout.iim
+FILEDELETE NAME={{folderDownload}}\Macros\colab\logout.iim
 WAIT SECONDS=1
 URL GOTO={{urlDownload}}/{{urlSubDownload}}/logout.iim
-SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=logout.iim
+SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Macros\colab FILE=logout.iim
 
 WAIT SECONDS=1
-FILEDELETE NAME={{downloadFolder}}\Macros\colab\logout_f.iim
+FILEDELETE NAME={{folderDownload}}\Macros\colab\logout_f.iim
 WAIT SECONDS=1
 URL GOTO={{urlDownload}}/{{urlSubDownload}}/logout_f.iim
-SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=logout_f.iim
+SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Macros\colab FILE=logout_f.iim
 
 WAIT SECONDS=1
-FILEDELETE NAME={{downloadFolder}}\Macros\colab\data.iim
+FILEDELETE NAME={{folderDownload}}\Macros\colab\data.iim
 WAIT SECONDS=1
 URL GOTO={{urlDownload}}/{{urlSubDownload}}/data.iim
-SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=data.iim
+SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Macros\colab FILE=data.iim
 
 WAIT SECONDS=1
-FILEDELETE NAME={{downloadFolder}}\Macros\colab\run.js
+FILEDELETE NAME={{folderDownload}}\Macros\colab\run.js
 URL GOTO={{urlDownload}}/{{urlSubDownload}}/run.js
-SAVEAS TYPE=TXT FOLDER={{downloadFolder}}\Macros\colab FILE=run.js
+SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Macros\colab FILE=run.js

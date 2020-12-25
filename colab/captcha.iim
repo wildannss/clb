@@ -1,8 +1,9 @@
 VERSION BUILD={{version}} RECORDER=FX
-SET !DATASOURCE {{source}}
+SET !DATASOURCE {{source}}.csv
 SET !DATASOURCE_COLUMNS {{coloumn}}
 SET !DATASOURCE_LINE {{loop}}
 SET !USERAGENT {{!COL5}}
+PROXY ADDRESS={{!COL6}}
 
 ''download captcha''
 WAIT SECONDS=3

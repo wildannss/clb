@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //VARIABEL HEAD
 var version = "8970419";
-var source = "users.csv";
-var coloumn = 5;
-var folderDownload = "C:\\Users\\Administrator\\Downloads\\FirefoxPortable\\Data\\profile\\iMacros";
+var source = "users";
+var coloumn = 8;
+var folderDownload = "C:\\FirefoxPortable\\Data\\profile\\iMacros";
 var urlDownload = "https://raw.githubusercontent.com/wildannss/clb/main";
 var urlSubDownload = "colab";
-var urlDataDownload = "data_users";
+// var urlDataDownload = "data_users";
 var counted = parseInt(window.prompt("Use number only"));
 var jml = 150;
 var serviceCap = "http://imacros2.2captcha.com";
@@ -38,7 +38,7 @@ function head(){
     iimSet("folderDownload",folderDownload);
     iimSet("urlDownload",urlDownload);
     iimSet("urlSubDownload",urlSubDownload);
-    iimSet("urlDataDownload",urlDataDownload);
+    // iimSet("urlDataDownload",urlDataDownload);
     iimSet("serviceCap",serviceCap);
     iimSet("counted",counted);
     iimSet("jml",jml);
@@ -51,7 +51,7 @@ function keepRun(){
             iimPlayCode("WAIT SECONDS=30");
         }
     }
-    if(j<=56){
+    if(j>=56){
         logout();
     }
 }
