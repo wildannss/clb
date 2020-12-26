@@ -5,12 +5,12 @@ TAB T=1
 CLEAR
 
 ''delete old datasource''
-WAIT SECONDS=1
-FILEDELETE NAME={{folderDownload}}\Datasources\{{source}}{{counted}}.csv
+'WAIT SECONDS=1
+'FILEDELETE NAME={{folderDownload}}\Datasources\{{source}}{{counted}}.csv
 
 ''go to datasource''
 WAIT SECONDS=1
-URL GOTO={{urlDownload}}/users{{counted}}.csv
+URL GOTO={{urlDownload}}/{{urlSubDownload}}/users{{counted}}.csv
 
 ''download datasource''
 WAIT SECONDS=1

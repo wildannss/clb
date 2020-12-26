@@ -79,11 +79,11 @@ function go(){
                 iimSet("loop",b);
                 iimPlay("colab/logout_f");
             }
-            /////////////UPDATE SCRIPT/////////////
-            head();
-            iimSet("loop",b);
-            iimPlay("colab/update");
-            ///////////////////////////////////////
+            // /////////////UPDATE SCRIPT/////////////
+            // head();
+            // iimSet("loop",b);
+            // iimPlay("colab/update");
+            // ///////////////////////////////////////
 
             //LOGIN
             head();
