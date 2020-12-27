@@ -1,5 +1,5 @@
 VERSION BUILD={{version}} RECORDER=FX
-SET !DATASOURCE {{source}}.csv
+SET !DATASOURCE {{source}}{{counted}}.csv
 SET !DATASOURCE_COLUMNS {{coloumn}}
 SET !DATASOURCE_LINE {{loop}}
 SET !USERAGENT {{!COL5}}

@@ -14,4 +14,4 @@ URL GOTO={{urlDownload}}/{{urlSubDownload}}/users{{counted}}.csv
 
 ''download datasource''
 WAIT SECONDS=1
-SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Datasources\ FILE={{source}}.csv
+SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Datasources\ FILE={{source}}{{counted}}.csv
