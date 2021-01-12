@@ -46,14 +46,12 @@ function head(){
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //KEEP RUNNING
 function keepRun(){
-    var cek = "";
-    iimSet("cek",cek);
     for(j=1; j<=56; j++){
         if(error15.test(iimGetErrorText(iimPlay("colab/keep")))){
             iimPlayCode("WAIT SECONDS=30");
-            if(cek == "Sign in"){
-                j=56;
-            }
+            if(error1.test(iimGetErrorText(iimPlayCode("EVENT TYPE=CLICK SELECTOR=\"#gb>DIV>DIV>A\" BUTTON=0")))){
+                continue;
+            };
         }
     }
 }
