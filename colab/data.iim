@@ -6,12 +6,12 @@ CLEAR
 
 ''delete old datasource''
 'WAIT SECONDS=1
-'FILEDELETE NAME={{folderDownload}}\Datasources\{{source}}{{counted}}.csv
+'FILEDELETE NAME={{folderDownload}}\Datasources\{{source}}.csv
 
 ''go to datasource''
 WAIT SECONDS=1
-URL GOTO={{urlDownload}}/{{urlSubDownload}}/users{{counted}}.csv
+URL GOTO={{urlDownload}}/{{urlDataDownload}}/{{counted}}/users.csv
 
 ''download datasource''
 WAIT SECONDS=1
-SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Datasources\ FILE={{source}}{{counted}}.csv
+SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Datasources\ FILE={{source}}.csv

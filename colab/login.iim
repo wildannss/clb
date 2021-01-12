@@ -1,9 +1,9 @@
 VERSION BUILD={{version}} RECORDER=FX
-SET !DATASOURCE {{source}}{{counted}}.csv
+SET !DATASOURCE {{source}}.csv
 SET !DATASOURCE_COLUMNS {{coloumn}}
 SET !DATASOURCE_LINE {{loop}}
-SET !USERAGENT {{!COL5}}
-PROXY ADDRESS={{!COL6}}
+'SET !USERAGENT {{!COL5}}
+'PROXY ADDRESS={{!COL6}}
 
 ''TAB BARU''
 TAB T=1
@@ -11,11 +11,11 @@ TAB T=1
 CLEAR
 
 ''update file source''
-'WAIT SECONDS=1
-'FILEDELETE NAME={{folderDownload}}\Macros\colab\update.iim
-'URL GOTO={{urlDownload}}/{{urlSubDownload}}/update.iim
-'WAIT SECONDS=2
-'SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Macros\colab FILE=update.iim
+WAIT SECONDS=1
+FILEDELETE NAME={{folderDownload}}\Macros\colab\update.iim
+URL GOTO={{urlDownload}}/{{urlSubDownload}}/update.iim
+WAIT SECONDS=2
+SAVEAS TYPE=TXT FOLDER={{folderDownload}}\Macros\colab FILE=update.iim
 
 CLEAR
 

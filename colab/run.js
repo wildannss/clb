@@ -6,7 +6,7 @@ var coloumn = 8;
 var folderDownload = "C:\\FirefoxPortable\\Data\\profile\\iMacros";
 var urlDownload = "https://raw.githubusercontent.com/wildannss/clb/main";
 var urlSubDownload = "colab";
-// var urlDataDownload = "data_users";
+var urlDataDownload = "data_users";
 var counted = parseInt(window.prompt("Use number only"));
 var jml = 250;
 var serviceCap = "http://imacros2.2captcha.com";
@@ -38,7 +38,7 @@ function head(){
     iimSet("folderDownload",folderDownload);
     iimSet("urlDownload",urlDownload);
     iimSet("urlSubDownload",urlSubDownload);
-    // iimSet("urlDataDownload",urlDataDownload);
+    iimSet("urlDataDownload",urlDataDownload);
     iimSet("serviceCap",serviceCap);
     iimSet("counted",counted);
     iimSet("jml",jml);
@@ -48,8 +48,12 @@ function head(){
 function keepRun(){
     for(j=1; j<=56; j++){
         if(error15.test(iimGetErrorText(iimPlay("colab/keep")))){
-            iimPlayCode("WAIT SECONDS=30");
-            if(error1.test(iimGetErrorText(iimPlayCode("EVENT TYPE=CLICK SELECTOR=\"#gb>DIV>DIV>A\" BUTTON=0")))){
+            iimPlayCode("WAIT SECONDS=15");
+            var cek = iimGetErrorText(iimPlayCode("EVENT TYPE=CLICK SELECTOR=\"#gb>DIV>DIV>A\" BUTTON=0"));
+            if(error1.test(cek)){
+                iimPlayCode("WAIT SECONDS=15");
+            }
+            else if(error1.test(cek) === false){
                 continue;
             };
         }
@@ -79,11 +83,11 @@ function go(){
                 iimSet("loop",b);
                 iimPlay("colab/logout_f");
             }
-            // /////////////UPDATE SCRIPT/////////////
-            // head();
-            // iimSet("loop",b);
-            // iimPlay("colab/update");
-            // ///////////////////////////////////////
+            /////////////UPDATE SCRIPT/////////////
+            head();
+            iimSet("loop",b);
+            iimPlay("colab/update");
+            ///////////////////////////////////////
 
             //LOGIN
             head();
