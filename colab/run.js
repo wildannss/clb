@@ -73,7 +73,7 @@ function logout(){
 //RUNNING CODE
 function go(){
     // for(a=1; a<=jml; a++){
-        for(b=1; b<=jml; b++){
+        // for(b=1; b<=jml; b++){
             //UPDATE DATASOURCE
             head();
             iimSet("loop",b);
@@ -221,7 +221,7 @@ function go(){
                 continue;
             }
             continue;
-        }
+        // }
     // }
 }
 
