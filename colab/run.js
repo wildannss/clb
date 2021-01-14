@@ -52,9 +52,6 @@ function keepRun(){
             var cek = iimGetErrorText(iimPlayCode("EVENT TYPE=CLICK SELECTOR=\"#gb>DIV>DIV>A\" BUTTON=0"));
             if(error1.test(cek)){
                 iimPlayCode("WAIT SECONDS=15");
-            }
-            else if(error1.test(cek) === false){
-                continue;
             };
         }
     }
