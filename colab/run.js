@@ -160,7 +160,7 @@ function go(){
                     }
                 }
                 //CAPTCHA NEW
-                else if(error4.test(run2)){
+                else if(error10.test(run2)){
                     head();
                     iimSet("loop",b);
                     var run7 = iimGetErrorText(iimPlay("colab/captcha_new"));
@@ -185,7 +185,7 @@ function go(){
                 }
             }
             //CAPTCHA NEW
-            else if(error4.test(run1)){
+            else if(error10.test(run1)){
                 head();
                 iimSet("loop",b);
                 var run8 = iimGetErrorText(iimPlay("colab/captcha_new"));
