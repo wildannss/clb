@@ -47,12 +47,16 @@ function head(){
 //KEEP RUNNING
 function keepRun(){
     for(j=1; j<=56; j++){
-        if(error15.test(iimGetErrorText(iimPlay("colab/keep")))){
+        var kiprun = iimGetErrorText(iimPlay("colab/keep"));
+        if(error15.test(kiprun) === true){
             iimPlayCode("WAIT SECONDS=15");
             var cek = iimGetErrorText(iimPlayCode("EVENT TYPE=CLICK SELECTOR=\"#gb>DIV>DIV>A\" BUTTON=0"));
             if(error1.test(cek)){
                 iimPlayCode("WAIT SECONDS=15");
             };
+        }
+        else if(error15.test(kiprun) === false){
+            j += 56;
         }
     }
 }
