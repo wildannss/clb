@@ -68,7 +68,7 @@ function logout(){
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //RUNNING CODE
 function go(){
-    for(a=1; a<=jml; a++){
+    // for(a=1; a<=jml; a++){
         for(b=1; b<=jml; b++){
             //UPDATE DATASOURCE
             head();
@@ -218,7 +218,7 @@ function go(){
             }
             continue;
         }
-    }
+    // }
 }
 
 go();
