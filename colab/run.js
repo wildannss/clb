@@ -8,7 +8,7 @@ var urlDownload = "https://raw.githubusercontent.com/wildannss/clb/main";
 var urlSubDownload = "colab";
 var urlDataDownload = "data_users";
 var counted = parseInt(window.prompt("Use number only"));
-var jml = 1;
+var jml = 3;
 var serviceCap = "http://imacros2.2captcha.com";
 //VARIABEL ERROR
 var error1 = /RuntimeError: Can not locate element specified by selector "#gb>DIV>DIV>A"/g;
@@ -115,7 +115,7 @@ function go(){
                             iimSet("loop",b);
                             var run5 = iimGetErrorText(iimPlay("colab/captcha"));
                             //BELUM LOGOUT
-                            if(error1.test(run5)){
+                            if(error3.test(run5)){
                                 logout();
                             }
                             //RUNNING CODE
@@ -125,7 +125,7 @@ function go(){
                             }
                         }
                         //BELUM LOGOUT
-                        else if(error1.test(run4)){
+                        else if(error3.test(run4)){
                             logout();
                         }
                         //RUNNING CODE
@@ -140,7 +140,7 @@ function go(){
                         iimSet("loop",b);
                         var run6 = iimGetErrorText(iimPlay("colab/captcha"));
                         //BELUM LOGOUT
-                        if(error1.test(run6)){
+                        if(error3.test(run6)){
                             logout();
                         }
                         //RUNNING CODE
@@ -150,7 +150,7 @@ function go(){
                         }
                     }
                     //BELUM LOGOUT
-                    else if(error1.test(run3)){
+                    else if(error3.test(run3)){
                         logout();
                     }
                     //RUNNING CODE
@@ -165,7 +165,7 @@ function go(){
                     iimSet("loop",b);
                     var run7 = iimGetErrorText(iimPlay("colab/captcha_new"));
                     //BELUM LOGOUT
-                    if(error1.test(run7)){
+                    if(error3.test(run7)){
                         logout();
                     }
                     //RUNNING CODE
@@ -175,7 +175,7 @@ function go(){
                     }
                 }
                 //BELUM LOGOUT
-                else if(error1.test(run2)){
+                else if(error3.test(run2)){
                     logout();
                 }
                 //RUNNING CODE
@@ -190,7 +190,7 @@ function go(){
                 iimSet("loop",b);
                 var run8 = iimGetErrorText(iimPlay("colab/captcha_new"));
                 //BELUM LOGOUT
-                if(error1.test(run8)){
+                if(error3.test(run8)){
                     logout();
                 }
                 //RUNNING CODE
@@ -200,7 +200,7 @@ function go(){
                 }
             }
             //BELUM LOGOUT
-            else if(error1.test(run1)){
+            else if(error3.test(run1)){
                 logout();
             }
             //RUNNING CODE
