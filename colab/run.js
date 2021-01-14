@@ -8,7 +8,7 @@ var urlDownload = "https://raw.githubusercontent.com/wildannss/clb/main";
 var urlSubDownload = "colab";
 var urlDataDownload = "data_users";
 var counted = parseInt(window.prompt("Use number only"));
-var jml = 3;
+var jml = 500;
 var serviceCap = "http://imacros2.2captcha.com";
 //VARIABEL ERROR
 var error1 = /RuntimeError: Can not locate element specified by selector "#gb>DIV>DIV>A"/g;
@@ -46,7 +46,7 @@ function head(){
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //KEEP RUNNING
 function keepRun(){
-    for(j=1; j<=6; j++){
+    for(j=1; j<=56; j++){
         var kiprun = iimGetErrorText(iimPlay("colab/keep"));
         if(error15.test(kiprun) === true){
             iimPlayCode("WAIT SECONDS=15");
@@ -56,7 +56,7 @@ function keepRun(){
             };
         }
         else if(error15.test(kiprun) === false){
-            j += 6;
+            j += 56;
         }
     }
 }
@@ -76,43 +76,43 @@ function go(){
         for(b=1; b<=jml; b++){
             //UPDATE DATASOURCE
             head();
-            iimSet("loop",b);
+            iimSet("loop",parseInt(counted+b));
             var run0 = iimGetErrorText(iimPlay("colab/data"));
             //JIKA ADA WARNING STAY PAGE
             if(error12.test(run0)){
                 head();
-                iimSet("loop",b);
+                iimSet("loop",parseInt(counted+b));
                 iimPlay("colab/logout_f");
             }
             /////////////UPDATE SCRIPT/////////////
             head();
-            iimSet("loop",b);
+            iimSet("loop",parseInt(counted+b));
             iimPlay("colab/update");
             ///////////////////////////////////////
 
             //LOGIN NEW
             head();
-            iimSet("loop",b);
+            iimSet("loop",parseInt(counted+b));
             var run1 = iimGetErrorText(iimPlay("colab/login_new"));
             if(error7.test(run1)){
                 //LOGIN DEL NEW
                 head();
-                iimSet("loop",b);
+                iimSet("loop",parseInt(counted+b));
                 var run2 = iimGetErrorText(iimPlay("colab/login_del_new"));
                 if(error9.test(run2)){
                     //LOGIN
                     head();
-                    iimSet("loop",b);
+                    iimSet("loop",parseInt(counted+b));
                     var run3 = iimGetErrorText(iimPlay("colab/login"));
                     if(error2.test(run3)){
                         //LOGIN DEL
                         head();
-                        iimSet("loop",b);
+                        iimSet("loop",parseInt(counted+b));
                         var run4 = iimGetErrorText(iimPlay("colab/login_del"));
                         //CAPTCHA
                         if(error4.test(run4)){
                             head();
-                            iimSet("loop",b);
+                            iimSet("loop",parseInt(counted+b));
                             var run5 = iimGetErrorText(iimPlay("colab/captcha"));
                             //BELUM LOGOUT
                             if(error3.test(run5)){
@@ -137,7 +137,7 @@ function go(){
                     //CAPTCHA
                     else if(error4.test(run3)){
                         head();
-                        iimSet("loop",b);
+                        iimSet("loop",parseInt(counted+b));
                         var run6 = iimGetErrorText(iimPlay("colab/captcha"));
                         //BELUM LOGOUT
                         if(error3.test(run6)){
@@ -162,7 +162,7 @@ function go(){
                 //CAPTCHA NEW
                 else if(error10.test(run2)){
                     head();
-                    iimSet("loop",b);
+                    iimSet("loop",parseInt(counted+b));
                     var run7 = iimGetErrorText(iimPlay("colab/captcha_new"));
                     //BELUM LOGOUT
                     if(error3.test(run7)){
@@ -187,7 +187,7 @@ function go(){
             //CAPTCHA NEW
             else if(error10.test(run1)){
                 head();
-                iimSet("loop",b);
+                iimSet("loop",parseInt(counted+b));
                 var run8 = iimGetErrorText(iimPlay("colab/captcha_new"));
                 //BELUM LOGOUT
                 if(error3.test(run8)){
