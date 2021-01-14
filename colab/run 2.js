@@ -46,7 +46,7 @@ function head(){
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //KEEP RUNNING
 function keepRun(){
-    for(j=1; j<=6; j++){
+    for(j=1; j<=56; j++){
         var kiprun = iimGetErrorText(iimPlay("colab/keep"));
         if(error15.test(kiprun) === true){
             iimPlayCode("WAIT SECONDS=15");
@@ -56,7 +56,7 @@ function keepRun(){
             };
         }
         else if(error15.test(kiprun) === false){
-            j += 6;
+            j += 56;
         }
     }
 }
@@ -73,7 +73,7 @@ function logout(){
 //RUNNING CODE
 function go(){
     // for(a=1; a<=jml; a++){
-        for(b=1; b<=jml; b++){
+        // for(b=1; b<=jml; b++){
             //UPDATE DATASOURCE
             head();
             iimSet("loop",b);
@@ -90,125 +90,138 @@ function go(){
             iimPlay("colab/update");
             ///////////////////////////////////////
 
-            //LOGIN NEW
+            //LOGIN
             head();
             iimSet("loop",b);
-            var run1 = iimGetErrorText(iimPlay("colab/login_new"));
-            if(error7.test(run1)){
-                //LOGIN DEL NEW
+            var run1 = iimGetErrorText(iimPlay("colab/login"));
+            //JIKA BELUM LOGOUT
+            switch(true){
+            case error1.test(run1):
+                logout();
+                continue;
+            //LOGIN NORMAL DEL USER
+            case error2.test(run1):
                 head();
                 iimSet("loop",b);
-                var run2 = iimGetErrorText(iimPlay("colab/login_del_new"));
-                if(error9.test(run2)){
-                    //LOGIN
+                var run2 = iimGetErrorText(iimPlay("colab/login_new"));
+                //LOGIN NEW
+                switch(true){
+                case error7.test(run2):
                     head();
                     iimSet("loop",b);
-                    var run3 = iimGetErrorText(iimPlay("colab/login"));
-                    if(error2.test(run3)){
-                        //LOGIN DEL
+                    var run3 = iimGetErrorText(iimPlay("colab/login_del"));
+                    //LOGIN NEW DEL USER
+                    switch(true){
+                    case error6.test(run3):
                         head();
                         iimSet("loop",b);
-                        var run4 = iimGetErrorText(iimPlay("colab/login_del"));
-                        //CAPTCHA
-                        if(error4.test(run4)){
+                        var run4 = iimGetErrorText(iimPlay("colab/login_del_new"));
+                        ////////////////
+                        ////CAPTCHA////
+                        switch(true){
+                        case error10.test(run4):
                             head();
                             iimSet("loop",b);
-                            var run5 = iimGetErrorText(iimPlay("colab/captcha"));
-                            //BELUM LOGOUT
-                            if(error1.test(run5)){
+                            var run_y = iimGetErrorText(iimPlay("colab/captcha_new"));
+                            //JIKA SUDAH PERNAH LOGIN
+                            switch(true){
+                            case error3.test(run_y):
                                 logout();
-                            }
-                            //RUNNING CODE
-                            else if(error15.test(run5)){
+                                continue;
+                            case error15.test(run_y):
                                 keepRun();
-                                logout();
+                                continue;
                             }
-                        }
-                        //BELUM LOGOUT
-                        else if(error1.test(run4)){
+                            continue;
+                        //JIKA SUDAH PERNAH LOGIN
+                        case error3.test(run4):
                             logout();
-                        }
-                        //RUNNING CODE
-                        else if(error15.test(run4)){
+                            continue;
+                        /////////////////
+                        case error15.test(run4):
                             keepRun();
-                            logout();
+                            continue;
                         }
-                    }
-                    //CAPTCHA
-                    else if(error4.test(run3)){
+                        continue;
+                    ////////////////
+                    ////CAPTCHA////
+                    case error4.test(run3):
                         head();
                         iimSet("loop",b);
-                        var run6 = iimGetErrorText(iimPlay("colab/captcha"));
-                        //BELUM LOGOUT
-                        if(error1.test(run6)){
+                        var run_z = iimGetErrorText(iimPlay("colab/captcha"));
+                        //JIKA SUDAH PERNAH LOGIN
+                        switch(true){
+                        case error3.test(run_z):
                             logout();
-                        }
-                        //RUNNING CODE
-                        else if(error15.test(run6)){
+                            continue;
+                        case error15.test(run_z):
                             keepRun();
-                            logout();
-                        }
-                    }
-                    //BELUM LOGOUT
-                    else if(error1.test(run3)){
+                            continue;
+                        continue;
+                    //JIKA SUDAH PERNAH LOGIN
+                    case error3.test(run3):
                         logout();
-                    }
-                    //RUNNING CODE
-                    else if(error15.test(run3)){
+                        continue;
+                    /////////////////
+                    case error15.test(run3):
                         keepRun();
-                        logout();
+                        continue;
                     }
-                }
-                //CAPTCHA NEW
-                else if(error4.test(run2)){
+                    continue;
+                ////////////////
+                ////CAPTCHA////
+                case error10.test(run2):
                     head();
                     iimSet("loop",b);
-                    var run7 = iimGetErrorText(iimPlay("colab/captcha_new"));
-                    //BELUM LOGOUT
-                    if(error1.test(run7)){
+                    var run_w = iimGetErrorText(iimPlay("colab/captcha_new"));
+                    //JIKA SUDAH PERNAH LOGIN
+                    switch(true){
+                    case error3.test(run_w):
                         logout();
-                    }
-                    //RUNNING CODE
-                    else if(error15.test(run7)){
+                        continue;
+                    case error15.test(run_w):
                         keepRun();
-                        logout();
+                        continue;
                     }
+                    continue;
                 }
-                //BELUM LOGOUT
-                else if(error1.test(run2)){
+                //JIKA SUDAH PERNAH LOGIN
+                case error3.test(run2):
                     logout();
-                }
-                //RUNNING CODE
-                else if(error15.test(run2)){
+                    continue;
+                case error15.test(run2):
                     keepRun();
-                    logout();
+                    continue;
                 }
-            }
-            //CAPTCHA NEW
-            else if(error4.test(run1)){
+                /////////////////
+                continue;
+            ////CAPTCHA////
+            case error4.test(run1):
                 head();
                 iimSet("loop",b);
-                var run8 = iimGetErrorText(iimPlay("colab/captcha_new"));
-                //BELUM LOGOUT
-                if(error1.test(run8)){
+                var run_x = iimGetErrorText(iimPlay("colab/captcha"));
+                //JIKA SUDAH PERNAH LOGIN
+                switch(true){
+                case error3.test(run_x):
                     logout();
-                }
-                //RUNNING CODE
-                else if(error15.test(run8)){
+                    continue;
+                /////////////////
+                case error15.test(run_x):
                     keepRun();
-                    logout();
+                    continue;
                 }
-            }
-            //BELUM LOGOUT
-            else if(error1.test(run1)){
+                continue;
+            //JIKA SUDAH PERNAH LOGIN
+            case error3.test(run1):
                 logout();
-            }
-            //RUNNING CODE
-            else if(error15.test(run1)){
+                b--;
+                continue;
+            case error15.test(run1):
                 keepRun();
-                logout();
+                continue;
             }
-        }
+            // continue;
+        // }
     // }
 }
 
