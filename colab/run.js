@@ -8,7 +8,7 @@ var urlDownload = "https://raw.githubusercontent.com/wildannss/clb/main";
 var urlSubDownload = "colab";
 var urlDataDownload = "data_users";
 var counted = parseInt(window.prompt("Use number only"));
-var jml = 500;
+var jml = 1000;
 var serviceCap = "http://imacros2.2captcha.com";
 //VARIABEL ERROR
 var error1 = /RuntimeError: Can not locate element specified by selector "#gb>DIV>DIV>A"/g;
